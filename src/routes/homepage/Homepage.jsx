@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./homepage.css";
+import { TypeAnimation } from "react-type-animation";
 
 const Homepage = () => {
   return (
@@ -15,6 +16,33 @@ const Homepage = () => {
             <div className="bg"></div>
           </div>
           <img src="/bot.png" alt="" className="bot" />
+          <div className="chat">
+            <img src="/bot.png" alt=""></img>
+            <TypeAnimation
+              sequence={[
+                "Chat with an AI assistant",
+                1000,
+                "Ask anything, anytime",
+                1000,
+                "Your personal AI guide",
+                1000,
+                "Get insights from AI",
+                1000,
+              ]}
+              wrapper="span"
+              repeat={Infinity}
+              cursor={true}
+              omitDeletionAnimation={true}
+            />
+          </div>
+        </div>
+      </div>
+      <div className="terms">
+        <img src="/logo.png" alt="" />
+        <div className="links">
+          <Link to="/">Terms of Service</Link>
+          <span>|</span>
+          <Link to="/">Privacy Policy</Link>
         </div>
       </div>
     </div>

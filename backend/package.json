@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@clerk/clerk-react": "^5.7.0",
     "cors": "^2.8.5",
     "express": "^4.19.2",
     "imagekit": "^5.2.0",

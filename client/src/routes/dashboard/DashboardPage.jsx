@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const DashboardPage = () => {
   const queryClient = useQueryClient();
 
-  const navigate = useNavigate;
+  const navigate = useNavigate();
 
   const mutation = useMutation({
     mutationFn: (text) => {
@@ -16,7 +16,7 @@ const DashboardPage = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ text }),
-      }).then[(res) => res.json()];
+      }).then((res) => res.json());
     },
     onSuccess: (id) => {
       // Invalidate and refetch

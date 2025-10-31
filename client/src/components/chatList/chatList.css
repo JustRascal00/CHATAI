@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    padding: 12px 10px 16px;
 
     hr{
         border: none;
@@ -12,22 +13,37 @@
         margin: 20px 0px;
     }
     .title{
-        font-weight: 600;
-        font-size: 10px;
+        font-weight: 700;
+        font-size: 11px;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        opacity: .75;
         margin-bottom: 10px;
     }
     .list{
         display: flex;
         flex-direction: column;
-        overflow: scroll;
+        gap: 6px;
+        overflow-y: auto;
+        padding-right: 4px;
+        scrollbar-width: thin;
+        scrollbar-color: rgba(255,255,255,.2) transparent;
     }
 
     a{
-        padding: 10px;
+        padding: 8px 10px;
         border-radius: 10px;
+        color: white;
+        text-decoration: none;
+        background: transparent;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        border: 1px solid transparent;
 
         &:hover{
-            background-color: black;
+            background-color: rgba(255,255,255,0.06);
+            border-color: rgba(255,255,255,0.08);
         }
     }
 
@@ -37,6 +53,8 @@
         align-items: center;
         gap: 10px;
         font-size: 12px;
+        padding: 10px 8px;
+        border-top: 1px solid rgba(255,255,255,0.06);
 
         img{
             width: 34px;

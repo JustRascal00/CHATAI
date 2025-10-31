@@ -50,11 +50,11 @@ const NewPrompt = ({ data }) => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          question: question.lenght ? question : undefined,
+          question: question.length ? question : undefined,
           answer,
           img: img.dbData?.filePath || undefined,
         }),
-      }).then[(res) => res.json()];
+      }).then((res) => res.json());
     },
     onSuccess: () => {
       queryClient
@@ -70,7 +70,6 @@ const NewPrompt = ({ data }) => {
             aiData: {},
           });
         });
-      navigate(`/dashboard/chats/${id}`);
     },
     onError: (err) => {
       console.log(err);
@@ -95,6 +94,8 @@ const NewPrompt = ({ data }) => {
       mutation.mutate();
     } catch (err) {
       console.log(err);
+      const message = err?.message || "Failed to get a response from the AI.";
+      setAnswer(message);
     }
   };
 
@@ -111,7 +112,7 @@ const NewPrompt = ({ data }) => {
 
   useEffect(() => {
     if (!hasRun.current) {
-      if (data?.history?.lenght === 1) {
+      if (data?.history?.length === 1) {
         add(data.history[0].parts[0].text, true);
       }
     }

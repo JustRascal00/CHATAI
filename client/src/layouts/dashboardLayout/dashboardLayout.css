@@ -1,15 +1,21 @@
 .dashboardLayout {
     display: flex;
-    gap: 50px;
+    gap: 28px;
     padding-top: 20px;
     height: 100%;
   
     .menu {
       flex: 1;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px;
+      overflow: hidden;
     }
   
     .content {
       flex: 4;
-      background-color: #00000083;
+      background-color: rgba(0,0,0,0.35);
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.06);
     }
   }
